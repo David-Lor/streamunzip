@@ -1,0 +1,4 @@
+github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
+github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
+github.com/zhyee/zipstream v0.0.0-20230625125559-133d8d1afaa0 h1:BcjUUYzMORs7sJtOCWLXaelG7woHMN1QEs4yCB1QZ48=
+github.com/zhyee/zipstream v0.0.0-20230625125559-133d8d1afaa0/go.mod h1:aaGtAo3dTqYtHjcliPNlyXMIIodvGm8y6uK2KMTYHrk=
