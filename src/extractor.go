@@ -21,7 +21,7 @@ type ZipExtractor struct {
 
 func (e *ZipExtractor) ExtractInteractively() error {
 	// https://pkg.go.dev/github.com/zhyee/zipstream#section-readme
-	var saveAll bool
+	saveAll := false
 	e.zipReader = zipstream.NewReader(e.ZipStream)
 
 fileLoop:
@@ -52,22 +52,22 @@ fileLoop:
 
 			option = strings.TrimSpace(option)
 			option = strings.ToLower(option)
-			if option == "a" {
+			if option == OptionSaveAll {
 				saveAll = true
 				log.Println("Save all")
 			}
 
 			switch {
-			case option == "s" || saveAll:
+			case option == OptionSave || saveAll:
 				log.Println("Saving file", file.Name)
 				if err := e.saveFile(file); err != nil {
 					log.Println("ERROR saving file", file.Name, ":", err)
 				}
 
-			case option == "k":
+			case option == OptionSkip:
 				log.Println("Skip file", file.Name)
 
-			case option == "q":
+			case option == OptionQuit:
 				log.Println("Quit")
 				return nil
 
